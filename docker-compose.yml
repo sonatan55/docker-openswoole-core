@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  php-app:
+    build:
+      context: .
+      dockerfile: php_2.dockerfile
+      # dockerfile: php.dockerfile
+    container_name: php_app
+    restart: unless-stopped
+    volumes:
+      - ./php_src:/var/www/html:delegated
+    environment:
+      - APP_ENV=development
+    ports:
+      - "9501:9501"  # Adjust the port as needed

@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-      # dockerfile: php.dockerfile
     container_name: php_app
     restart: unless-stopped
     volumes:

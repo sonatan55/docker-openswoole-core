@@ -4,7 +4,7 @@ services:
   php-app:
     build:
       context: .
-      dockerfile: php_2.dockerfile
+      dockerfile: php.dockerfile
       # dockerfile: php.dockerfile
     container_name: php_app
     restart: unless-stopped
